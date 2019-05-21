@@ -33,6 +33,8 @@ void* client_refresher(void* client);
  */
 void exit_example(int status, int sockfd, pthread_t *client_daemon);
 
+#define IOTSHARP_CLIENTID "clientid89f866fced124f6e902515705f78148a"
+#define IOTSHARP_ACCESSTOKEN "3cb97cd31fbc40b08d12ec47a6fad622"
 /**
  * A simple program to that publishes the current time whenever ENTER is pressed. 
  */
@@ -76,7 +78,7 @@ int main(int argc, const char *argv[])
     uint8_t sendbuf[2048]; /* sendbuf should be large enough to hold multiple whole mqtt messages */
     uint8_t recvbuf[1024]; /* recvbuf should be large enough any whole mqtt message expected to be received */
     mqtt_init(&client, sockfd, sendbuf, sizeof(sendbuf), recvbuf, sizeof(recvbuf), publish_callback);
-    mqtt_connect(&client, "clientid89f866fced124f6e902515705f78148a", NULL, NULL, 0,"3cb97cd31fbc40b08d12ec47a6fad622", NULL, 0, 400);
+    mqtt_connect(&client, IOTSHARP_CLIENTID, NULL, NULL, 0,IOTSHARP_ACCESSTOKEN, NULL, 0, 400);
 
     /* check that we don't have any errors */
     if (client.error != MQTT_OK) {
