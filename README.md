@@ -1,3 +1,14 @@
+```shell
+
+
+./bin/iotsharp_publisher  127.0.0.1  1883 /devices/me/telemetry
+```
+
+
+
+![IotSharp Logo](docs/iotsharp_c_client.png)
+
+
 <p align="right">
     <a href="https://github.com/LiamBindle/MQTT-C/stargazers"><img src="https://img.shields.io/github/stars/LiamBindle/MQTT-C.svg?style=social&label=Star" style="margin-left:5em"></a>
     <a href="https://github.com/LiamBindle/MQTT-C/network/members"><img src="https://img.shields.io/github/forks/LiamBindle/MQTT-C.svg?style=social&label=Fork"></a>
@@ -72,7 +83,7 @@ the unit tests. For convenience, a simple `"makefile"` is included to build the 
 examples on UNIX-like machines. The unit tests and examples can be built as follows:
 ```bash
     $ make all
-``` 
+```
 The unit tests and examples will be built in the `"bin/"` directory. The unit tests can be run 
 like so:
 ```bash
